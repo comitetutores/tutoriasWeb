@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../Styles/style-soli.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitudes</title>
+</head>
+<body>
+    <div class="top-bar">
+        <img src="../imagenes/iconos/capa-mas (1).png" alt="Icono" class="icon" onclick="toggleSidebar()">
+        <h2>Solicitud</h2>
+    </div>   
+    
+
+      <div class="sidebar" id="sidebar">
+        <div class="profile-image">
+          <img src="../imagenes/utzmg.webp" alt="Imagen de perfil">
+      </div>
+        <button id="alubutton" class="sidebar-btn">
+            <img src="../imagenes/iconos/puerta-abierta (1).png" alt="Icono 1" class="sidebar-icon">
+            Inicio
+            <div class="line"></div>
+        </button>
+        <!-- <button  id="solibutton" class="sidebar-btn">
+            <img src="../imagenes/iconos/diario-alternativo (1).png" alt="Icono 2" class="sidebar-icon">
+            Solicitudes
+            <div class="line"></div>
+        </button> -->
+        <button id="msjbutton" class="sidebar-btn">
+            <img src="../imagenes/iconos/mensaje.png" alt="Icono 4" class="sidebar-icon">
+            Mensaje
+            <div class="line"></div>
+        </button>
+        <button id="calbutton" class="sidebar-btn">
+            <img src="../imagenes/iconos/calendario.png" alt="Icono 5" class="sidebar-icon">
+            Calendario
+            <div class="line"></div>
+        </button>
+        <button id="ayubutton" class="sidebar-btn">
+            <img src="../imagenes/iconos/interrogatorio (1).png" alt="Icono 3" class="sidebar-icon">
+            Ayuda
+            <div class="line"></div>
+        </button>
+        <button id="logoutButton" class="sidebar-btn logout-btn">
+            <img src="../imagenes/iconos/salir-alt (1).png" alt="Icono 3" class="sidebar-icon">
+            Cerrar Sesión
+            <div class="line"></div>
+        </button>
+                       
+    </div>
+
+
+
+
+    <div>
+        
+    </div>
+    
+
+
+
+<div class="font-family">
+    <div class="form-container">
+        <h2>Formulario de Asesoría</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido-paterno">Apellido Paterno:</label>
+                    <input type="text" id="apellido-paterno" name="apellido-paterno" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido-materno">Apellido Materno:</label>
+                    <input type="text" id="apellido-materno" name="apellido-materno" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="matricula">Matrícula:</label>
+                    <input type="text" id="matricula" name="matricula" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="asesoria">Asesoría:</label>
+                <select id="asesoria" name="asesoria">
+                    <option value="ninguna" selected>Ninguna</option>
+                    <option value="matematicas">Matemáticas</option>
+                    <option value="fisica">Física</option>
+                    <option value="quimica">Química</option>
+                    <option value="programacion">Programación</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comentarios">Comentarios:</label>
+                <textarea id="comentarios" name="comentarios"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Solicitar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    
+   
+
+    <script src="../Scripts/script-soli.js"></script> <!-- Agrega el archivo JavaScript -->
+    <script src="../Scripts/script-close.js"></script>
+</body>
+</html>

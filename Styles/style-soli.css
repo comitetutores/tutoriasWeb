@@ -1,0 +1,244 @@
+body {
+    background-color: #990634;
+    /* -image: url('../imagenes/fondo.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6%; /* Altura de la barra */
+    background-color: #62152D; /* Color de la barra */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    z-index: 4; /* Asegura que la barra esté por encima de la imagen */
+}
+
+.top-bar h2 {
+    color: white; /* Color del texto */
+    margin: 0; /* Quitar margen por defecto */
+    font-size: 1.5em; /* Ajusta el tamaño del texto según sea necesario */
+}
+
+.icon {
+    position: absolute;
+    left: 10px; /* Ajusta la posición horizontal del ícono */
+    width: 30px; /* Ajusta el ancho del ícono */
+    height: auto; /* Mantiene la relación de aspecto */
+    cursor: pointer;
+}
+
+.container {
+    position: relative; /* Para posicionar el contenido de forma relativa */
+    width: 30%; /* Ajusta el ancho del contenedor según sea necesario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    background-color: white; /* Fondo blanco sólido */
+    padding: 20px; /* Espaciado interno para el contenedor */
+    border-radius: 15px; /* Bordes redondeados para el contenedor */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Sombra añadida */
+}
+
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #4F1124;
+    transition: left 0.3s ease;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: flex-start; /* Comienza desde la parte superior */
+    padding-top: 50px; /* Añade un padding superior para mover todos los elementos hacia abajo */
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-btn {
+    top: 50px;
+    width: calc(100% - 20px); /* Reducimos el ancho para dejar espacio para el margen */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    padding: 15px 20px;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Ajustamos el margen izquierdo para mover los botones hacia la derecha */
+    margin-top: -10px; /* Ajustamos el margen superior para subir los botones */
+    position: relative; /* Añadimos posición relativa para los elementos hijos puedan tener posición absoluta relativa a este */
+}
+
+
+.sidebar-icon {
+    width: 30px;
+    height: auto;
+    margin-right: 40px;
+}
+
+.line {
+    position: absolute; /* Posición absoluta con respecto al elemento padre (sidebar-btn) */
+    bottom: 0;
+    left: 0; /* Cambiamos el inicio de la línea para que empiece desde el borde izquierdo */
+    width: 0; /* Empezamos sin ancho */
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s; /* Agregamos transición para suavizar el efecto de crecimiento */
+}
+
+.sidebar-btn:hover .line {
+    width: 100%; /* Ajustamos el ancho al 100% al pasar el mouse sobre el botón */
+}
+
+.sidebar-btn.logout-btn {
+    margin-top: 135px; /* Ajusta el margen superior para subir el botón de cerrar sesión */
+    margin-bottom: 20px; /* Ajusta según el espacio que quieras debajo del botón */
+}
+
+.profile-image {
+    text-align: center;
+    margin-top: 20px; /* Ajusta el margen superior para mover la imagen hacia abajo */
+    margin-bottom: 20px; /* Ajusta el margen inferior para más espacio entre la imagen y los botones */
+    width: 190px; /* Ajusta el ancho del contenedor */
+    height: 190px; /* Ajusta la altura del contenedor */
+    border-radius: 100%; /* Redondea los bordes para que parezca una imagen de perfil circular */
+    overflow: hidden; /* Oculta cualquier contenido que exceda el tamaño del contenedor */
+}
+
+.profile-image img {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    object-fit: cover; /* Ajusta el tamaño de la imagen para que se ajuste al contenedor */
+    object-position: center; /* Centra la imagen vertical y horizontalmente en el contenedor */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.font-family {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px; /* Ajusta el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    box-sizing: border-box; /* Incluye el padding y borde en el ancho */
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* Centra el título */
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Aumenta el espacio entre los campos */
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 250px; /* Incrementa el tamaño mínimo de cada campo */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye el padding y borde en el ancho */
+}
+
+.form-group select {
+    margin-bottom: 20px; /* Aumenta el espacio inferior del selector */
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+    margin-top: 20px; /* Aumenta el espacio superior del textarea */
+}
+
+.form-group:last-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea verticalmente el botón */
+    margin-bottom: 15px; /* Asegúrate de mantener el margen inferior */
+}
+
+.form-group button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 40%; /* Ajusta el ancho del botón */
+    font-size: 16px;
+    box-sizing: border-box; /* Incluye el padding y borde en el ancho */
+    margin-top: 20px;
+}
+
+.form-group button:hover {
+    background-color: #218838;
+}
+
+
+
+
