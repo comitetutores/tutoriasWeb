@@ -18,8 +18,19 @@ function toggleSidebar() {
 
 
 
-document.getElementById('alubutton').addEventListener('click' , function() {
-    window.location.href = 'index-alu.php';
+
+document.getElementById('tutbutton').addEventListener('click' , function() {
+    window.location.href = 'index-tut.php';
 });
 
+document.getElementById('solitutbutton').addEventListener('click' , function() {
+    window.location.href = 'index-soli-tut.php';
+});
 
+document.getElementById('msjtutbutton').addEventListener('click' , function() {
+    window.location.href = 'index-msj-tut.php';
+});
+
+document.getElementById('caltutbutton').addEventListener('click' , function() {
+    window.location.href = 'index-cal-tut.php';
+});

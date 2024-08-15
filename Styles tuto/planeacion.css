@@ -1,0 +1,231 @@
+/* Estilo para la página general */
+body {
+    background-color: #990634;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6%;
+    background-color: #62152D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+.top-bar h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+.container {
+    background-color: #e3e3e3;
+    padding: 20px;
+    border-radius: 10px;
+    width: 1400px; /* Increased width */
+}
+
+.conter {
+    background-color: #7f7f7f;
+    border-radius: 5px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.input-group div {
+    flex: 1;
+    margin: 5px;
+    background-color: #ffffff;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    min-width: 250px; /* Minimum width to ensure good layout */
+}
+
+.input-group div input {
+    background: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    text-align: center; /* Centra el texto */
+}
+
+.input-group div label {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #CECCCC;
+    background-color: #ff0048;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.table-container {
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center; /* Centra el texto dentro de las celdas */
+}
+
+th {
+    background-color: #7f7f7f;
+    color: white;
+}
+
+td {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para los inputs pequeños en la columna No. */
+.numero-pequeno {
+    width: 50px; /* Ajusta el ancho según sea necesario */
+    text-align: center;
+    border: none;
+    background: #dad2d2;
+    color: black;
+}
+
+.nombre-alumno {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+}
+
+/* Estilo para ajustar los cuadros de selección */
+input[type="checkbox"] {
+    transform: scale(1.5); /* Aumenta el tamaño del cuadro de selección */
+}
+
+.extra-section {
+    margin-top: 20px;
+}
+
+.extra-row {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    margin-bottom: 20px; /* Espacio entre los elementos */
+}
+
+.extra-comment.large {
+    width: 48%; /* Para que ambos divs ocupen el 48% del ancho, dejando espacio entre ellos */
+    padding: 10px;
+    background-color: #7f7f7f;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.extra-comment.large label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.extra-comment.large textarea {
+    width: 100%; /* Ajusta el ancho del textarea al 100% del contenedor */
+    padding: 10px;
+    background: #ffffff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    resize: vertical; /* Permite cambiar el tamaño vertical del textarea */
+}
+
+.extra-input {
+    flex: 0.2; /* Ajusta el tamaño más pequeño */
+    padding: 10px;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 5px;
+}
+
+.extra-empty {
+    flex: 1; /* Espacio vacío que ocupa el resto del espacio */
+}
+
+.extra-input.extra-small {
+    flex: 50%; /* Ajusta el tamaño automáticamente */
+    margin-left: 75%;
+    padding: 10px;
+    background-color: #7f7f7f;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.extra-input label, .extra-comment label {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: block;
+}
+
+.extra-input input, .extra-comment input {
+    width: calc(100% - 10px); /* Ajusta el ancho del input dejando espacio para el padding */
+    padding: 5px;
+    margin-top: 5px;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    background-color: #0080ff;
+    padding: 15px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}

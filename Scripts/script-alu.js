@@ -17,18 +17,6 @@ function toggleSidebar() {
 
 
 document.getElementById('solibutton').addEventListener('click' , function() {
-    window.location.href = 'index-soli.html';
-});
-
-document.getElementById('msjbutton').addEventListener('click' , function() {
-    window.location.href = 'index-msj.html';
-});
-
-document.getElementById('calbutton').addEventListener('click' , function() {
-    window.location.href = 'index-cal.html';
-});
-
-document.getElementById('ayubutton').addEventListener('click' , function() {
-    window.location.href = 'index-ayu.html';
+    window.location.href = 'index-soli.php';
 });
 

@@ -1,0 +1,187 @@
+body {
+    background-image: url('../imagenes/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6%; /* Altura de la barra */
+    background-color: #62152D; /* Color de la barra */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    z-index: 4; /* Asegura que la barra esté por encima de la imagen */
+}
+
+.top-bar h2 {
+    color: white; /* Color del texto */
+    margin: 0; /* Quitar margen por defecto */
+    font-size: 1.5em; /* Ajusta el tamaño del texto según sea necesario */
+}
+
+.icon {
+    position: absolute;
+    left: 10px; /* Ajusta la posición horizontal del ícono */
+    width: 30px; /* Ajusta el ancho del ícono */
+    height: auto; /* Mantiene la relación de aspecto */
+    cursor: pointer;
+}
+
+.container {
+    position: relative; /* Para posicionar el contenido de forma relativa */
+    width: 30%; /* Ajusta el ancho del contenedor según sea necesario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    background-color: white; /* Fondo blanco sólido */
+    padding: 20px; /* Espaciado interno para el contenedor */
+    border-radius: 15px; /* Bordes redondeados para el contenedor */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Sombra añadida */
+}
+
+.outer-white-rectangle {
+    position: absolute;
+    top: 10%; /* Posición debajo de la barra superior */
+    left: 33%; /* Posición ajustada */
+    width: 30%; /* Ajusta el ancho según sea necesario */
+    background-color: white; /* Color de fondo blanco */
+    z-index: 1; /* Asegura que el contenedor esté en la capa correcta */
+    padding: 20px; /* Añade padding al contenedor externo */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra añadida */
+}
+
+.white-rectangle {
+    width: 90%; /* Ajusta el ancho del contenedor interno */
+    margin: 0 auto; /* Centra el contenedor interno horizontalmente */
+    background-color: rgba(255, 255, 255, 0.8); /* Transparencia añadida */
+    padding: 10px; /* Añadido padding horizontal */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8); /* Sombra añadida */
+}
+
+.white-rectangle h3 {
+    margin: 0; /* Quita los márgenes predeterminados */
+    font-size: 24px; /* Ajusta el tamaño del texto según sea necesario */
+    font-weight: bold; /* Ajusta el grosor del texto */
+    color: #4F1124; /* Color del texto */
+    text-align: center;
+}
+
+.additional-text {
+    margin-top: 20px; /* Espacio entre el contenedor interno y el texto adicional */
+    font-size: 16px; /* Ajusta el tamaño del texto según sea necesario */
+    color: #4F1124; /* Color del texto */
+    text-align: center;
+}
+
+.image-container {
+    position: absolute;
+    top: 38%; /* Ajusta el espacio superior según sea necesario */
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+    height: 50%; /* Ajusta la altura del contenedor de la imagen */
+    z-index: 2; /* Asegura que la imagen esté por encima del fondo */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+}
+
+.image-container img {
+    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    max-height: 100%; /* Asegura que la imagen no exceda la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsión */
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #4F1124;
+    transition: left 0.3s ease;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: flex-start; /* Comienza desde la parte superior */
+    padding-top: 50px; /* Añade un padding superior para mover todos los elementos hacia abajo */
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-btn {
+    top: 50px;
+    width: calc(100% - 20px); /* Reducimos el ancho para dejar espacio para el margen */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    padding: 15px 20px;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Ajustamos el margen izquierdo para mover los botones hacia la derecha */
+    margin-top: -10px; /* Ajustamos el margen superior para subir los botones */
+    position: relative; /* Añadimos posición relativa para los elementos hijos puedan tener posición absoluta relativa a este */
+}
+
+
+.sidebar-icon {
+    width: 30px;
+    height: auto;
+    margin-right: 40px;
+}
+
+.line {
+    position: absolute; /* Posición absoluta con respecto al elemento padre (sidebar-btn) */
+    bottom: 0;
+    left: 0; /* Cambiamos el inicio de la línea para que empiece desde el borde izquierdo */
+    width: 0; /* Empezamos sin ancho */
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s; /* Agregamos transición para suavizar el efecto de crecimiento */
+}
+
+.sidebar-btn:hover .line {
+    width: 100%; /* Ajustamos el ancho al 100% al pasar el mouse sobre el botón */
+}
+
+.sidebar-btn.logout-btn {
+    margin-top: 135px; /* Ajusta el margen superior para subir el botón de cerrar sesión */
+    margin-bottom: 20px; /* Ajusta según el espacio que quieras debajo del botón */
+}
+
+.profile-image {
+    text-align: center;
+    margin-top: 20px; /* Ajusta el margen superior para mover la imagen hacia abajo */
+    margin-bottom: 20px; /* Ajusta el margen inferior para más espacio entre la imagen y los botones */
+    width: 190px; /* Ajusta el ancho del contenedor */
+    height: 190px; /* Ajusta la altura del contenedor */
+    border-radius: 100%; /* Redondea los bordes para que parezca una imagen de perfil circular */
+    overflow: hidden; /* Oculta cualquier contenido que exceda el tamaño del contenedor */
+}
+
+.profile-image img {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    object-fit: cover; /* Ajusta el tamaño de la imagen para que se ajuste al contenedor */
+    object-position: center; /* Centra la imagen vertical y horizontalmente en el contenedor */
+}

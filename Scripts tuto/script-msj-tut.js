@@ -19,18 +19,18 @@ function toggleSidebar() {
 
 
 
-document.getElementById('alubutton').addEventListener('click' , function() {
-    window.location.href = 'index-alu.html';
+document.getElementById('tutbutton').addEventListener('click' , function() {
+    window.location.href = 'index-tut.php';
 });
 
-document.getElementById('solibutton').addEventListener('click' , function() {
-    window.location.href = 'index-soli.html';
+document.getElementById('solitutbutton').addEventListener('click' , function() {
+    window.location.href = 'index-soli-tut.php';
 });
 
-document.getElementById('calbutton').addEventListener('click' , function() {
-    window.location.href = 'index-cal.html';
+document.getElementById('caltutbutton').addEventListener('click' , function() {
+    window.location.href = 'index-cal-tut.php';
 });
 
-document.getElementById('ayubutton').addEventListener('click' , function() {
-    window.location.href = 'index-ayu.html';
+document.getElementById('ayututbutton').addEventListener('click' , function() {
+    window.location.href = 'index-ayu-tut.php';
 });

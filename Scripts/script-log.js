@@ -1,18 +1,41 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.getElementById('loginForm');
+    const container = document.getElementById('container');
 
-const loginBtn = document.getElementById('login');
-const loginFormBtn = document.getElementById('loginBtn');
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
 
+        const matricula = document.getElementById('matricula').value.trim();
+        const contraseña = document.getElementById('contraseña').value.trim();
 
+        // Validación de campos vacíos
+        if (matricula === "" || contraseña === "") {
+            alert("Matrícula o contraseña no pueden estar vacíos.");
+            return;
+        }
 
-loginBtn.addEventListener('click', () => {
-    container.classList.remove("active");
-});
+        const formData = new FormData(loginForm);
 
-loginFormBtn.addEventListener('click', () => {
-    container.classList.add("active");
-
-    // Redirigir a una nueva página después de que la transición termine
-    container.addEventListener('transitionend', () => {
-        window.location.href = 'index-alu.html'; // Reemplaza 'nueva_pagina.html' con la URL a la que quieras redirigir
-    }, { once: true });
+        fetch('login.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Si el login es exitoso, agrega la clase 'active' y redirecciona después de la transición
+                container.classList.add("active");
+                container.addEventListener('transitionend', () => {
+                    window.location.href = '../dashboard/dashboard.php';
+                }, { once: true });
+            } else {
+                // Si el login falla, muestra un mensaje de error
+                alert("Matrícula o contraseña incorrectos.");
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Ocurrió un error al intentar iniciar sesión.');
+        });
+    });
 });

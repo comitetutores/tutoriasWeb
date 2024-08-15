@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../Styles/style-alu.css">
+    <link rel="stylesheet" href="../Styles tuto/style-tut.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario</title>
@@ -27,17 +27,17 @@
         <div class="profile-image">
           <img src="../imagenes/utzmg.webp" alt="Imagen de perfil">
       </div>
-        <button id="alubutton" class="sidebar-btn">
+        <button id="tutbutton" class="sidebar-btn">
             <img src="../imagenes/iconos/puerta-abierta (1).png" alt="Icono 1" class="sidebar-icon">
             Inicio
             <div class="line"></div>
         </button>
-        <button  id="solibutton" class="sidebar-btn">
+        <button  id="solitutbutton" class="sidebar-btn">
             <img src="../imagenes/iconos/diario-alternativo (1).png" alt="Icono 2" class="sidebar-icon">
             Solicitudes
             <div class="line"></div>
         </button>
-        <button id="msjbutton" class="sidebar-btn">
+        <button id="msjtutbutton" class="sidebar-btn">
             <img src="../imagenes/iconos/mensaje.png" alt="Icono 4" class="sidebar-icon">
             Mensaje
             <div class="line"></div>
@@ -47,7 +47,7 @@
             Calendario
             <div class="line"></div>
         </button> -->
-        <button id="ayubutton" class="sidebar-btn">
+        <button id="ayututbutton" class="sidebar-btn">
             <img src="../imagenes/iconos/interrogatorio (1).png" alt="Icono 3" class="sidebar-icon">
             Ayuda
             <div class="line"></div>
@@ -67,7 +67,7 @@
         <img src="../imagenes/fondoinicio.jpg">
     </div>
 
-    <script src="../Scripts/script-cal.js"></script> <!-- Agrega el archivo JavaScript -->
-    <script src="../Scripts/script-close.js"></script>
+    <script src="../Scripts tuto/script-cal-tut.js"></script> <!-- Agrega el archivo JavaScript -->
+    <script src="../Scripts tuto/script-close.js"></script>
 </body>
 </html>
